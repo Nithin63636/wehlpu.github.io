@@ -1,0 +1,611 @@
+*{
+    margin: 0;
+    padding : 0;
+    font-family: 'Heebo', sans-serif;
+
+}
+.font1{
+    font-family: 'Rubik Marker Hatch', cursive;
+}
+.font2{
+    font-family: 'Lobster', cursive;
+    font-family: 'Rubik Marker Hatch', cursive;
+}
+.header {
+    min-height:100vh;
+    width: 100%;
+    background-image: 
+    url(web2images/web2image10.avif);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img {
+    width: 150px;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size:62px;
+}
+.text-box p{
+   margin: 10px  0 40px;
+   font-size: 15px;
+   color: #fff;
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding:12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position:relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid rgba(44, 105, 235, 0.958);
+    background: rgba(48, 64, 248, 0.958);
+    transition: 0.5s;
+}
+nav .fa{
+    display: none; /*so only visble for smaller screen*/
+    }
+
+@media (max-width: 700px){ /* for small screen*/
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: rgb(66, 68, 220);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    /*visit font-awesome 4cdn  copy the main link add it to
+    head using link tag ,paste the copied in href of the link*/
+    /* search for font awesome 4 icons ,and type close in the icon searchbutton
+    and copy th link add it below class nav-links remove aria-.. from the link*/
+    nav .fa{
+       display: block;
+       color:#fff;
+       margin: 10px;
+       font-size: 22px;
+       cursor: pointer;
+
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+   
+/*-----whycattinder-----*/
+.whywehlpu {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+} 
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color:#777;
+    font-size: 14px;
+    font-weight:300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.colwhy {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin: 5%;
+    padding:20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    border: 2px dashed rgb(88, 88, 234);
+}
+h3{
+    text-align:center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.colwhy:hover {
+    box-shadow: 0 0 20px 10px rgba(50, 34, 196, 0.382);
+}
+@media(max-width: 700px){
+    .row{
+       flex-direction: column;
+    }
+}
+/*------------tools-------------*/
+.tools {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col {
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+
+}
+.campus-col img {
+    width: 100%;
+    height: 60%;
+    display: block;
+    
+}
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+   background: transparent; /* you are supposed to putbackground color 
+                     i dont want it*/
+}
+.layer h3 {
+    width:100%;
+    font-weight: 500;
+    color:#fff;
+    font-size: 22px;
+    bottom:0;
+    left: 50%;
+    transform:translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover  h3{
+    bottom: 49%;
+    opacity: 1;
+    transition: 0.5s;
+}
+.collab {
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    padding-top:100px;
+}
+.collab-col {
+  flex-basis: 31%;
+  border-radius:10px;
+  margin-bottom:5%;
+  text-align:center;
+}
+.collab-col img{
+    width: 100%;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+/*
+.collab-col p {
+    padding:0;
+}
+.collab-col h3 {
+    margin-top:16px;
+    margin-bottom: 15px;
+    text-align:left;
+}
+*/
+/* -------testimonials------*/
+.testimonials {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align:  center;
+}
+.testimonial-col {
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background:  #d0e3ff;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonial-col img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonial-col p {
+    padding: 0;
+}
+.testimonial-col h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+@media (max-width: 700px) {
+    .testimonial-col img {
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+/*  call to action */
+.cta {
+    margin:  100px auto;
+    width: 80%;
+    background-image:
+    url(web2images/web2image14.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+
+}
+.cta h1{
+   color:#fff;
+   margin-bottom: 40px;
+   padding: 0;
+}
+@media (max-width: 700px)
+{
+    .cta h1 {
+        font-size:24px;
+    }
+}
+/*-----footer*/
+.footer {
+    width:100%;
+    text-align: center;
+    padding: 30px 0;
+
+}
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px; 
+    font-weight: 600;
+
+}
+.icons .fa-brands {
+   margin:0 13px;
+   cursor: pointer;
+   padding: 18px 0;
+}
+.fa-solid {
+    color: rgb(255, 0, 0);
+}
+/*------------about us-----------*/
+.sub-header {
+    height: 70vh;
+    width: 100%;
+    background-image: url(web2images/web2image16.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1 {
+    margin-top:100px;
+}
+.about-us {
+    width:80%;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 0px;
+}
+.red-btn {
+    border:1px solid rgba(61, 75, 232, 0.958);
+    background: transparent;
+    color:rgba(77, 119, 234, 0.958);
+}
+.red-btn:hover {
+    color:  #fff;
+}
+/*---------------blog-----------*/
+.blog-content {
+    width:80%;
+    margin:auto;
+    padding: 60px 0;
+}
+.blog-left {
+    flex-basis: 65%;
+}
+.blog-left img {
+    max-width: 100%;
+}
+.blog-left h2 {
+    color:   #222;
+    font-weight: 600;
+    margin:30px 0;
+}
+.blog-left p {
+    color: #999;
+    padding: 0;
+}
+.blog-right {
+    flex-basis: 32%;
+}
+.blog-right h2{
+    background:rgb(54, 54, 224);
+    color:#fff;
+    padding: 7px  0px;
+    font-style: 16px;
+   margin-bottom: 20px;
+   text-align: center;
+}
+.blog-right div{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#555;
+    padding: 8px;
+    box-sizing:border-box;
+
+}
+.comment-box {
+    border:1px solid  #ccc;
+   margin: 50px 0;
+   padding: 10px 20px;
+}
+.comment-box h3 {
+    text-align:left;
+}
+.comment-form  input, .comment-form textarea{
+width:100%;
+padding:10px;
+margin:15px 0;
+box-sizing: border-box;
+border: none;
+outline:none;
+background:#f0f0f0;
+}
+.comment-form button {
+    margin:10px 0;
+}
+
+@media (max-width:700px) {
+  .sub-header h1 {
+    font-size: 24px;
+  }  
+}
+
+
+/*---------------contact us page--------------*/
+.location {
+    width: 80%;
+    margin:auto;
+    padding: 80px 0;
+}
+.location iframe {
+    width:100%;
+}
+.contact-us {
+    width:80%;
+    margin:auto;
+
+}
+.contact-col {
+    flex-basis:48%;
+    margin-bottom: 30px;
+}
+.contact-col form input  {
+   border: 1px solid rgb(19, 19, 202);
+}
+.contact-col form textarea{
+    border: 1px solid rgb(19, 19, 202);
+}
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fa {
+    font-size: 28px;
+    color: #4441f4;
+    margin: 10px;
+    margin-right:30px;
+
+}
+.contact-col div p {
+    padding:0;
+
+}
+.contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color:#555;
+    font-weight: 400;
+}
+
+.contact-col input , .contact-col textarea {
+   width: 100%;
+   padding:15px;
+   margin-bottom: 17px;
+   outline:none;
+   border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/*-------------*/
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+/*----idea-----*/
+
+.addbtn:hover{
+    background-color: rgb(112, 106, 237);
+    color: rgb(239, 236, 247);
+}
+
+.container{
+    margin: auto;  
+    width: 60%;
+}
+.diva1{
+    border: 2px solid black;
+   min-height: 400px;
+    border-radius: 10px;
+    /* width:60%; */
+    margin: auto;
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'Lobster', cursive;
+
+}
+#texta{
+    font-family: 'Lobster', cursive;
+    width: 60%;
+    height: 40%;
+    box-sizing: border-box;
+}
+.addbtn{
+    width: 80px;
+    height: 40px;
+    background-color: rgb(137, 137, 208);
+    border-radius: 7px;
+}
+
+.card-title{
+    text-align: center;
+}
+.btnn{
+    border-radius: 8px;
+}
+.card-text{
+    text-align: center;
+}
+/* rating--*/
+.stars input {
+    position: absolute;
+    left: -999999px;
+}
+
+.stars a {
+    display: inline-block;
+    padding-right:4px;
+    text-decoration: none;
+    margin:0;
+}
+
+.stars a:after {
+    position: relative;
+    font-size: 18px;
+    font-family: 'FontAwesome', serif;
+    display: block;
+    content: "\f005";
+    color: #9e9e9e;
+}
+
+
+span {
+  font-size: 0; /* trick to remove inline-element's margin */
+}
+
+.stars a:hover ~ a:after{
+  color: #9e9e9e !important;
+}
+span.active a.active ~ a:after{
+  color: #9e9e9e;
+}
+
+span:hover a:after{
+  color:blue !important;
+}
+
+span.active a:after,
+.stars a.active:after{
+  color:blue;
+}
